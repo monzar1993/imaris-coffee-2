@@ -18,6 +18,30 @@ function scrollFunction() {
 }
 // navbar
 
+//modal
+var modal = document.getElementById("myModal");
+var modalBg = document.getElementsByClassName("modal-bg");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.classList.toggle('active');
+    document.getElementById('myBtn').classList.toggle('active');
+}
+
+span.onclick = function() {
+    modal.classList.remove('active');
+    document.getElementById('myBtn').classList.remove('active');
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.classList.remove('active');
+        document.getElementById('myBtn').classList.remove('active');
+    }
+}
+
+//modal
 //tabs
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;

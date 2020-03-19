@@ -1,5 +1,70 @@
 .main {
     overflow: hidden;
+    #myBtn {
+        z-index: 99;
+        position: fixed;
+        right: -2px;
+        top: 50%;
+        width: 116px;
+        height: 145px;
+        background: #d5b584;
+        border: 2px solid #260a00;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 20px rgba(38, 10, 0, 0.3);
+        transform: translateY(-50%);
+        transition: 1s;
+        cursor: pointer;
+        .order {
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        &.active {
+            transform: translateY(-50%) translateX(-380%);
+        }
+    }
+    #myModal {
+        // display: none;
+    }
+    .modal {
+        &.active {
+            .modal-content {
+                transform: translateX(0%);
+            }
+        }
+        .modal-content {
+            position: fixed;
+            z-index: 100;
+            background-color: #D5B584;
+            padding: 0 20px;
+            width: 401px;
+            right: 0;
+            height: 100vh;
+            transform: translateX(100%);
+            transition: 1s;
+            .order-head {
+                margin: 34px 41px;
+                @include headings;
+                font-size: 30px;
+                line-height: 35px;
+            }
+            .close {
+                color: #260A00;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            &:hover,
+            &:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
     .dots {
         position: absolute;
         width: 309px;
@@ -656,20 +721,120 @@
                 margin-bottom: 6rem;
             }
         }
-        .review-box {
-            padding: 1rem;
-            border: 1px solid $gold-color;
-            border-radius: 20px;
+        .reviewer {
+            margin-bottom: 9px;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-family: $headings-font;
+        }
+        .talk-bubble {
+            margin-bottom: 30px;
+            display: inline-block;
+            position: relative;
+            width: 734px;
+            height: auto;
             background: #fff;
             box-shadow: 0px 0px 20px rgba(213, 181, 132, 0.3);
-            .reviewer {
-                margin-bottom: 9px;
-                font-size: 18px;
-                line-height: 21px;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                font-family: $headings-font;
-            }
+        }
+        .border {
+            border: 1px solid $gold-color;
+        }
+        .round {
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+        }
+        .tri-right.border.left-top:before {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -40px;
+            right: auto;
+            top: -8px;
+            bottom: auto;
+            border: 2px solid;
+            border-color: $gold-color transparent transparent transparent;
+        }
+        .tri-right.border.btm-left:before {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -8px;
+            right: auto;
+            top: auto;
+            bottom: -40px;
+            border: 2px solid;
+            border-color: transparent transparent transparent $gold-color;
+        }
+        .tri-right.btm-left:after {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0px;
+            right: auto;
+            top: auto;
+            bottom: -20px;
+            border: 2px solid;
+            border-color: transparent transparent transparent #fff;
+        }
+        .tri-right.border.btm-left-in:before {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: 34px;
+            top: auto;
+            bottom: -12px;
+            border: 16px solid;
+            border-color: #d5b584 transparent transparent #d5b584;
+            transform: scaleX(-1) rotate(225deg);
+            z-index: -1;
+        }
+        .tri-right.btm-left-in:after {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: 38px;
+            top: auto;
+            bottom: -12px;
+            border: 12px solid;
+            border-color: #fff transparent transparent #fff;
+            transform: scaleX(-1) rotate(225deg);
+        }
+        .tri-right.border.btm-right:before {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: -8px;
+            bottom: -40px;
+            border: 2px solid;
+            border-color: $gold-color $gold-color transparent transparent;
+        }
+        .tri-right.btm-right:after {
+            content: " ";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: auto;
+            right: 0px;
+            bottom: -20px;
+            border: 2px solid;
+            border-color: #fff #fff transparent transparent;
+        }
+        .talktext {
+            padding: 31px 38px 26px 48px;
+            text-align: left;
+            line-height: 1.5em;
         }
         .review-form {
             position: absolute;
@@ -885,8 +1050,19 @@
             .natural-product {
                 width: 50%;
                 margin: 2rem auto 3rem;
+                position: relative;
                 @media screen and (max-width: 767px) {
                     width: 100%;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -15px;
+                    top: 10px;
+                    width: 5px;
+                    height: 5px;
+                    background: #000;
+                    border-radius: 50%;
                 }
                 .more-info {
                     background: $gold-color;

@@ -322,6 +322,9 @@ section {
 .ml--50 {
   margin-left: -50px; }
 
+.mt-1 {
+  margin-top: 1rem; }
+
 .mb-1 {
   margin-bottom: 1rem; }
 
@@ -517,6 +520,57 @@ header {
 
 .main {
   overflow: hidden; }
+  .main #myBtn {
+    z-index: 99;
+    position: fixed;
+    right: -2px;
+    top: 50%;
+    width: 116px;
+    height: 145px;
+    background: #d5b584;
+    border: 2px solid #260a00;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgba(38, 10, 0, 0.3);
+    transform: translateY(-50%);
+    transition: 1s;
+    cursor: pointer; }
+    .main #myBtn .order {
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 10px;
+      margin: 0 auto; }
+    .main #myBtn.active {
+      transform: translateY(-50%) translateX(-380%); }
+  .main .modal.active .modal-content {
+    transform: translateX(0%); }
+  .main .modal .modal-content {
+    position: fixed;
+    z-index: 100;
+    background-color: #D5B584;
+    padding: 0 20px;
+    width: 401px;
+    right: 0;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: 1s; }
+    .main .modal .modal-content .order-head {
+      margin: 34px 41px;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 700;
+      color: #260a00;
+      font-size: 30px;
+      line-height: 35px; }
+    .main .modal .modal-content .close {
+      color: #260A00;
+      float: right;
+      font-size: 28px;
+      font-weight: bold; }
+    .main .modal .modal-content:hover, .main .modal .modal-content:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer; }
   .main .dots {
     position: absolute;
     width: 309px; }
@@ -1076,19 +1130,109 @@ header {
     @media screen and (max-width: 1024px) {
       .main .review-book .col-7 {
         margin-bottom: 6rem; } }
-  .main .review-book .review-box {
-    padding: 1rem;
-    border: 1px solid #D5B584;
-    border-radius: 20px;
+  .main .review-book .reviewer {
+    margin-bottom: 9px;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace; }
+  .main .review-book .talk-bubble {
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    width: 734px;
+    height: auto;
     background: #fff;
     box-shadow: 0px 0px 20px rgba(213, 181, 132, 0.3); }
-    .main .review-book .review-box .reviewer {
-      margin-bottom: 9px;
-      font-size: 18px;
-      line-height: 21px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-family: "Roboto Mono", monospace; }
+  .main .review-book .border {
+    border: 1px solid #D5B584; }
+  .main .review-book .round {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px; }
+  .main .review-book .tri-right.border.left-top:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 2px solid;
+    border-color: #D5B584 transparent transparent transparent; }
+  .main .review-book .tri-right.border.btm-left:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -8px;
+    right: auto;
+    top: auto;
+    bottom: -40px;
+    border: 2px solid;
+    border-color: transparent transparent transparent #D5B584; }
+  .main .review-book .tri-right.btm-left:after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 2px solid;
+    border-color: transparent transparent transparent #fff; }
+  .main .review-book .tri-right.border.btm-left-in:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 34px;
+    top: auto;
+    bottom: -12px;
+    border: 16px solid;
+    border-color: #d5b584 transparent transparent #d5b584;
+    transform: scaleX(-1) rotate(225deg);
+    z-index: -1; }
+  .main .review-book .tri-right.btm-left-in:after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 38px;
+    top: auto;
+    bottom: -12px;
+    border: 12px solid;
+    border-color: #fff transparent transparent #fff;
+    transform: scaleX(-1) rotate(225deg); }
+  .main .review-book .tri-right.border.btm-right:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -8px;
+    bottom: -40px;
+    border: 2px solid;
+    border-color: #D5B584 #D5B584 transparent transparent; }
+  .main .review-book .tri-right.btm-right:after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 0px;
+    bottom: -20px;
+    border: 2px solid;
+    border-color: #fff #fff transparent transparent; }
+  .main .review-book .talktext {
+    padding: 31px 38px 26px 48px;
+    text-align: left;
+    line-height: 1.5em; }
   .main .review-book .review-form {
     position: absolute;
     right: -20%;
@@ -1266,10 +1410,20 @@ header {
         width: 100%; } }
   .main .latest-news .welcome-to-us .natural-product {
     width: 50%;
-    margin: 2rem auto 3rem; }
+    margin: 2rem auto 3rem;
+    position: relative; }
     @media screen and (max-width: 767px) {
       .main .latest-news .welcome-to-us .natural-product {
         width: 100%; } }
+    .main .latest-news .welcome-to-us .natural-product::after {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      background: #000;
+      border-radius: 50%; }
     .main .latest-news .welcome-to-us .natural-product .more-info {
       background: #D5B584;
       padding: 10px 20px;

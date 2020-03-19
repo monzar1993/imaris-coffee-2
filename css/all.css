@@ -556,7 +556,7 @@ header {
     transform: translateX(100%);
     transition: 1s; }
     .main .modal .modal-content .order-head {
-      margin: 34px 41px;
+      margin: 34px 20px;
       font-family: "Roboto Mono", monospace;
       font-weight: 700;
       color: #260a00;
@@ -567,10 +567,41 @@ header {
       float: right;
       font-size: 28px;
       font-weight: bold; }
-    .main .modal .modal-content:hover, .main .modal .modal-content:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer; }
+      .main .modal .modal-content .close:hover, .main .modal .modal-content .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer; }
+    .main .modal .modal-content .order-form {
+      padding-left: 20px; }
+      .main .modal .modal-content .order-form form input {
+        padding: 0;
+        width: 100%;
+        padding-bottom: 1rem;
+        font-size: 16px;
+        line-height: 19px;
+        border: none;
+        background: #D5B584;
+        border-bottom: 2px solid #fff;
+        font-family: "Roboto Mono", monospace; }
+        .main .modal .modal-content .order-form form input::placeholder {
+          color: #fff; }
+      .main .modal .modal-content .order-form form p {
+        font-family: "Roboto Mono", monospace;
+        font-size: 16px;
+        line-height: 19px; }
+      .main .modal .modal-content .order-form form .img-block {
+        position: relative; }
+        .main .modal .modal-content .order-form form .img-block .table-img {
+          max-width: 315px; }
+      .main .modal .modal-content .order-form form .btn {
+        height: 50px;
+        padding: 2px 20px;
+        background: #fff;
+        float: right; }
+        .main .modal .modal-content .order-form form .btn.read-more::before {
+          background: #000; }
+        .main .modal .modal-content .order-form form .btn.read-more::after {
+          background: #000; }
   .main .dots {
     position: absolute;
     width: 309px; }

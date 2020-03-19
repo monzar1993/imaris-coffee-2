@@ -1,0 +1,171 @@
+@import "global/reset.scss";
+@import "global/var.scss";
+@import "global/mixins.scss";
+h1,
+h2,
+h3,
+h4,
+h5 {
+    @include headings;
+}
+
+h2 {
+    margin-bottom: 50px;
+    line-height: 75px;
+    @media screen and (max-width: 1024px) {
+        text-align: center;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+h3 {
+    margin-bottom: 50px;
+    line-height: 63px;
+    @media screen and (max-width: 1024px) {
+        text-align: center;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 21px;
+        line-height: 25px;
+    }
+}
+
+h4 {
+    @media screen and (max-width: 767px) {
+        font-size: 21px;
+        line-height: 30px;
+    }
+}
+
+h5 {
+    @media screen and (max-width: 767px) {
+        font-size: 21px;
+        line-height: 25px;
+    }
+}
+
+p,
+span,
+li {
+    @include text;
+}
+
+p {
+    margin-bottom: 3rem;
+    font-size: 16px;
+    line-height: 26px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 2rem;
+        font-size: 14px;
+        line-height: 23px;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.martynov-coffee {
+    position: relative;
+    overflow: hidden;
+}
+
+section {
+    padding: 4rem 0;
+    position: relative;
+    @media screen and (max-width: 767px) {
+        padding: 2rem 0;
+    }
+}
+
+.row {
+    display: flex;
+    height: 100%;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
+    .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 0px 50px;
+        @media screen and (max-width: 1024px) {
+            padding: 0px;
+        }
+        &-7 {
+            width: calc(60% - 100px);
+        }
+        &-5 {
+            width: calc(40% - 100px);
+        }
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.white {
+    color: #fff;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-flex-end {
+    align-items: flex-end;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+@import "partials/header.scss";
+@import "partials/main.scss";
+@import "partials/footer.scss";

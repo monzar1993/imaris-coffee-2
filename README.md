@@ -1,2 +1,2 @@
-# imaris-coffee-2
-imaris-coffee-2
+# imaris-martinov-coffee
+Test task for Imaris digital agency. Martinov Coffee

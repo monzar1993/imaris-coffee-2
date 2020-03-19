@@ -1,0 +1,27 @@
+@mixin headings {
+    font-family: $headings-font;
+    font-weight: 700;
+    color: $heading-color;
+}
+
+@mixin nav-font {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-family: $headings-font;
+    text-transform: uppercase;
+    color: $heading-color;
+}
+
+@mixin text {
+    font-family: $text-font;
+    font-weight: $base-font-weight;
+    color: $text-color;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

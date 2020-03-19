@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="css/all.css" type="text/css" />
 
-    <script src="js/main.js"></script>
+
     <title>Martinov Coffee</title>
 </head>
 
@@ -18,15 +18,30 @@
         <header>
             <div class="topnav" id="myTopnav">
                 <div class="menu-holder">
-                    <a href="#home" class="home-link active bold"><img id="logo" src="images/logo.png" alt="logo"></a>
-                    <a class="nav-link link-hide bold" href="#about-us">О нас</a>
-                    <a class="nav-link link-hide bold" href="#menu">Меню</a>
-                    <a class="nav-link link-hide bold" href="#news">Новости</a>
-                    <a class="nav-link link-hide bold" href="#ask-me">Вопрос-ответ</a>
-                    <a class="nav-link bold" href="#contact">Контакты</a>
-                    <a class="nav-link hide-link bold" href="#number"> <img class="phone-icon" src="images/phone-icon.png" alt="phone"> <span class="nav-link hide-link bold">+38 (097) 362-46-96</span></a>
-                    <a class="nav-link bold" href="#language">RU</a>
-                    <a class="nav-link hide-link bold" href="#search"><img class="search-icon" src="images/search-icon.png" alt="search"></a>
+                    <div class="menu-main">
+                        <a href="#home" class="home-link active bold"><img id="logo" src="images/logo.png" alt="logo"></a>
+                        <a class="nav-link link-hide bold" href="#about-us">О нас <span class="gold">+</span></a>
+                        <a class="nav-link link-hide bold" href="#menu">Меню</a>
+                        <a class="nav-link link-hide bold" href="#news">Новости</a>
+                        <a class="nav-link link-hide bold" href="#ask-me">Вопрос-ответ</a>
+                        <a class="nav-link bold" href="#contact">Контакты</a>
+                    </div>
+                    <div>
+                        <a class="nav-link hide-link bold" href="#number"> <svg class="phone-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.01 12.38C15.78 12.38 14.59 12.18 13.48 11.82C13.13 11.7 12.74 11.79 12.47 12.06L10.9 14.03C8.07 12.68 5.42 10.13 4.01 7.2L5.96 5.54C6.23 5.26 6.31 4.87 6.2 4.52C5.83 3.41 5.64 2.22 5.64 0.99C5.64 0.45 5.19 0 4.65 0H1.19C0.65 0 0 0.24 0 0.99C0 10.28 7.73 18 17.01 18C17.72 18 18 17.37 18 16.82V13.37C18 12.83 17.55 12.38 17.01 12.38Z"
+                                    fill="#D5B584" />
+                            </svg> <span class="nav-link hide-link bold number-link">+38 (097) 362-46-96</span></a>
+                        <div class="dropdown">
+                            <button class="dropbtn lang-btn bold">RU <span class="gold">+</span></button>
+                            <div class="dropdown-content lang-select">
+                                <a href="#">UA</a>
+                                <a href="#">EN</a>
+                            </div>
+                        </div>
+                        <a class="nav-link hide-link bold" href="#search"><img class="search-icon" src="images/search-icon.png" alt="search"></a>
+
+                    </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn bold">КОНДИТЕРСКИЕ ИЗДЕЛИЯ
@@ -54,11 +69,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col col-7">
-                            <h2>Martinov’s Coffee – семейное кафе династии Мартыновых</h2>
+                            <h1>Martinov’s Coffee – семейное кафе династии Мартыновых</h1>
                             <p class="promo">правильный кофе</p>
                             <p class="promo">авторские десерты от дипломированного кондитера</p>
                             <p class="promo">теплая душевная атмосфера</p>
                             <div class="find-us desktop">
+                                <div class="dots dots-3">
+                                    <img src="images/gold-dots.png" alt="dots">
+                                </div>
                                 <div class="contact-block">
                                     <p class="contact-p">адрес:</p>
                                     <p class="content-p">ул. Мира, 27, Софиевская Борщаговка, Киевская область</p>
@@ -78,9 +96,26 @@
                         </div>
                         <div class="col col-5">
                             <div class="main-slider">
-                                <img src="images/main-section-img.jpg" alt="main-section-img">
                                 <div class="play-btn">
                                     <div class="arrow-right"></div>
+                                </div>
+                                <div class="slider">
+                                    <div class="slider__wrapper">
+                                        <div class="slider__item">
+                                            <img src="images/main-section-img.jpg" alt="main-section-img">
+                                        </div>
+                                        <div class="slider__item">
+                                            <img src="images/main-section-img.jpg" alt="main-section-img">
+                                        </div>
+                                        <div class="slider__item">
+                                            <img src="images/main-section-img.jpg" alt="main-section-img">
+                                        </div>
+                                        <div class="slider__item">
+                                            <img src="images/main-section-img.jpg" alt="main-section-img">
+                                        </div>
+                                    </div>
+                                    <a class="slider__control slider__control_left" href="#" role="button"></a>
+                                    <a class="slider__control slider__control_right" href="#" role="button"></a>
                                 </div>
                             </div>
                             <div class="find-us mobile">
@@ -109,8 +144,8 @@
                     <div class="row">
                         <div class="col col-7">
                             <div class="about-us-coffee">
-                                <h1 class="cakes">Ca<br>kes</h1>
-                                <h1 class="coffee">Co<br>ff<br>ee</h1>
+                                <p class="cakes">Ca<br>kes</p>
+                                <p class="coffee mb-0">Co<br>ff<br>ee</p>
                                 <img src="images/about-us-img.jpg" alt="about-us">
                             </div>
                         </div>
@@ -128,30 +163,28 @@
                 </div>
             </section>
             <section class="our-instagram">
-                <div class="container">
-                    <h3 class="text-center">Мы в Instagram</h3>
-                    <div class="insta-images">
-                        <a class="post-link" href="#">
-                            <div class="insta-img-holder">
-                                <img src="images/insta-img-1.jpg" alt="insta-img">
-                            </div>
-                        </a>
-                        <a class="post-link" href="#">
-                            <div class="insta-img-holder">
-                                <img src="images/insta-img-2.jpg" alt="insta-img">
-                            </div>
-                        </a>
-                        <a class="post-link" href="#">
-                            <div class="insta-img-holder">
-                                <img src="images/insta-img-3.jpg" alt="insta-img">
-                            </div>
-                        </a>
-                        <a class="post-link" href="#">
-                            <div class="insta-img-holder">
-                                <img src="images/insta-img-4.jpg" alt="insta-img">
-                            </div>
-                        </a>
-                    </div>
+                <h3 class="text-center">Мы в Instagram</h3>
+                <div class="insta-images">
+                    <a class="post-link" href="#">
+                        <div class="insta-img-holder">
+                            <img src="images/insta-img-1.jpg" alt="insta-img">
+                        </div>
+                    </a>
+                    <a class="post-link" href="#">
+                        <div class="insta-img-holder">
+                            <img src="images/insta-img-2.jpg" alt="insta-img">
+                        </div>
+                    </a>
+                    <a class="post-link" href="#">
+                        <div class="insta-img-holder">
+                            <img src="images/insta-img-3.jpg" alt="insta-img">
+                        </div>
+                    </a>
+                    <a class="post-link" href="#">
+                        <div class="insta-img-holder">
+                            <img src="images/insta-img-4.jpg" alt="insta-img">
+                        </div>
+                    </a>
                 </div>
                 <div class="insta-connect">
                     <div class="side">
@@ -159,7 +192,7 @@
                     </div>
                     <div class="our-insta">
                         <div class="insta-description">
-                            <h5>Следите за нами в Instagram</h5>
+                            <h5 class="mb-1">Следите за нами в Instagram</h5>
                             <p>И будьте в курсе акций, розыгрышей и последних новинок меню</p>
                         </div>
                         <a class="read-more" href="#">ПОДПИСАТЬСЯ<img class="arrow" src="images/arrow_right.png"
@@ -171,49 +204,52 @@
                 </div>
             </section>
             <section class="new-positions">
-                <div class="container">
-                    <h3 class="text-center">Наши вкуснейшие новинки</h3>
-                    <div class="new-pos-images">
-                        <a class="post-link link-1" href="#">
-                            <div class="new-pos-img-holder">
-                                <img src="images/new-pos-1.jpg" alt="new-pos">
-                                <div class="new-pos-description">
-                                    <p class="mb-0 text-center cake-name">Торт “Шоколадный с малиной”</p>
-                                    <p class="mb-0 text-center cake-price"><span class="price">450</span>грн/кг</p>
-                                </div>
+                <h3 class="text-center">Наши вкуснейшие новинки</h3>
+                <div class="new-pos-images">
+                    <a class="post-link link-1" href="#">
+                        <div class="new-pos-img-holder">
+                            <span class="new">NEW</span>
+                            <img src="images/new-pos-1.jpg" alt="new-pos">
+                            <div class="new-pos-description">
+                                <p class="mb-0 text-center cake-name">Торт “Шоколадный с малиной”</p>
+                                <p class="mb-0 text-center cake-price"><span class="price">450</span>грн/кг</p>
                             </div>
-                        </a>
-                        <a class="post-link link-2" href="#">
-                            <div class="new-pos-img-holder">
-                                <img src="images/new-pos-2.jpg" alt="new-pos">
-                                <div class="new-pos-description">
-                                    <p class="mb-0 text-center cake-name">Торт “Нежность”</p>
-                                    <p class="mb-0 text-center cake-price"><span class="price">550</span>грн/кг</p>
-                                </div>
+                        </div>
+                    </a>
+                    <a class="post-link link-2" href="#">
+                        <div class="new-pos-img-holder">
+                            <span class="new">NEW</span>
+                            <img src="images/new-pos-2.jpg" alt="new-pos">
+                            <div class="new-pos-description">
+                                <p class="mb-0 text-center cake-name">Торт “Нежность”</p>
+                                <p class="mb-0 text-center cake-price"><span class="price">550</span>грн/кг</p>
                             </div>
-                        </a>
-                        <a class="post-link link-3" href="#">
-                            <div class="new-pos-img-holder">
-                                <img src="images/new-pos-3.jpg" alt="new-pos">
-                                <div class="new-pos-description">
-                                    <p class="mb-0 text-center cake-name">Торт “Творожный с клубникой”</p>
-                                    <p class="mb-0 text-center cake-price"><span class="price">550</span>грн/кг</p>
-                                </div>
+                        </div>
+                    </a>
+                    <a class="post-link link-3" href="#">
+                        <div class="new-pos-img-holder">
+                            <span class="new">NEW</span>
+                            <img src="images/new-pos-3.jpg" alt="new-pos">
+                            <div class="new-pos-description">
+                                <p class="mb-0 text-center cake-name">Торт “Творожный с клубникой”</p>
+                                <p class="mb-0 text-center cake-price"><span class="price">550</span>грн/кг</p>
                             </div>
-                        </a>
-                        <a class="post-link link-4" href="#">
-                            <div class="new-pos-img-holder">
-                                <img src="images/new-pos-4.jpg" alt="new-pos">
-                                <div class="new-pos-description">
-                                    <p class="mb-0 text-center cake-name">Торт “Творожный с клубникой”</p>
-                                    <p class="mb-0 text-center cake-price"><span class="price">550</span>грн/кг</p>
-                                </div>
+                        </div>
+                    </a>
+                    <a class="post-link link-4" href="#">
+                        <div class="new-pos-img-holder">
+                            <span class="new">NEW</span>
+                            <img src="images/new-pos-4.jpg" alt="new-pos">
+                            <div class="new-pos-description">
+                                <p class="mb-0 text-center cake-name">Торт “Творожный с клубникой”</p>
+                                <p class="mb-0 text-center cake-price"><span class="price">550</span>грн/кг</p>
                             </div>
-                        </a>
-                    </div>
-                    <a class="read-more mx-auto" href="#">ПОСМОТРЕТЬ ВСЕ ИЗДЕЛИЯ<img class="arrow"
-                            src="images/arrow_right.png" alt="arrow"></a>
+                        </div>
+                    </a>
                 </div>
+                <a class="read-more mx-auto" href="#">ПОСМОТРЕТЬ ВСЕ ИЗДЕЛИЯ<img class="arrow"
+                            src="images/arrow_right.png" alt="arrow"></a>
+
             </section>
             <section class="new-guest">
                 <div class="container">
@@ -231,11 +267,19 @@
                             </div>
                         </div>
                         <div class="col col-7">
-                            <h3>Акция! Подарки новым гостям!</h3>
-                            <p class="new-guest-text guest-1 mb-2">Мы всегда рады видеть новые лица в кафе и стремимся поделиться нашими десертами со всеми хорошими людьми. Именно поэтому мы дарим скидку 10% на кондитерские изделия всем новым клиентам, которые оформят заказ онлайн.</p>
-                            <p class="new-guest-text bold">Поспешите! До конца акции осталось всего:</p>
-                            <p><span id="t" class="timer bold"></span></p>
-                            <a class="read-more" href="#">ПОДРОБНЕЕ<img class="arrow" src="images/arrow_right.png"
+                            <h3 class="mb-1 ml--50">Акция! Подарки новым гостям!</h3>
+                            <p class="new-guest-text guest-1 mb-1">Мы всегда рады видеть новые лица в кафе и стремимся поделиться нашими десертами со всеми хорошими людьми. Именно поэтому мы дарим скидку 10% на кондитерские изделия всем новым клиентам, которые оформят заказ онлайн.</p>
+                            <p class="new-guest-text bold mb-1">Поспешите! До конца акции осталось всего:</p>
+                            <p class="mb-0">
+                                <span id="t" class="timer bold"></span>
+                                <div class="d-flex timer-text">
+                                    <span class="gold day">дней</span>
+                                    <span class="gold hour">часов</span>
+                                    <span class="gold minute">минут</span>
+                                    <span class="gold">секунд</span>
+                                </div>
+                            </p>
+                            <a class="read-more ml--50" href="#">ПОДРОБНЕЕ<img class="arrow" src="images/arrow_right.png"
                                     alt="arrow"></a>
                         </div>
                     </div>
@@ -270,10 +314,13 @@
                                 <form>
                                     <input class="bold white mb-2" type="text" placeholder="Ваше имя*">
                                     <input class="bold white mb-2" type="email" placeholder="Ваш email*">
-                                    <label class="mb-1 bold white" for="textarea">Отзыв*</label>
-                                    <textarea id="textarea" class="mb-2" cols="30" rows="10"></textarea>
-                                    <button class="read-more btn">ОТПРАВИТЬ<img class="arrow"
-                                            src="images/arrow_right.png" alt="arrow"></button>
+                                    <div class="texarea-block">
+                                        <label class="mb-1 bold white" for="textarea">Отзыв*</label>
+                                        <textarea id="textarea" class="mb-2" cols="30" rows="10"></textarea>
+                                        <button class="read-more btn">ОТПРАВИТЬ<img class="arrow"
+                                                src="images/arrow_right.png" alt="arrow"></button>
+
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -401,5 +448,6 @@
         </footer>
     </div>
 </body>
+<script src="js/main.js"></script>
 
 </html>

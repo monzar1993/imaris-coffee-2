@@ -675,7 +675,7 @@ header {
     transition: 1s; }
     @media screen and (max-width: 576px) {
       .main .modal .modal-content {
-        width: unset; } }
+        width: 320px; } }
     .main .modal .modal-content .order-head {
       margin: 34px 20px;
       font-family: "Roboto Mono", monospace;
@@ -762,7 +762,7 @@ header {
           margin-bottom: 91px; }
           @media screen and (max-width: 576px) {
             .main .modal .modal-content .order-form form .img-block .persons-n {
-              width: 315px;
+              width: 298px;
               margin-bottom: 33px; } }
           .main .modal .modal-content .order-form form .img-block .persons-n::placeholder {
             color: #260a00;

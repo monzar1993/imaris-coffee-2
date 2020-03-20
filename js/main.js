@@ -20,7 +20,6 @@ function scrollFunction() {
 
 //modal
 var modal = document.getElementById("myModal");
-var modalBg = document.getElementsByClassName("modal-bg");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 var makeOrder = document.getElementById('freeze');

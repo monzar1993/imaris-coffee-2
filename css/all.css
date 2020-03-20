@@ -326,6 +326,10 @@ section {
   .mb-m-0 {
     margin-bottom: 0 !important; } }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
 .ml--50 {
   margin-left: -50px; }
   @media screen and (max-width: 767px) {
@@ -792,7 +796,8 @@ header {
       color: #260a00;
       color: #FFF;
       margin-left: 20px;
-      width: 86%; }
+      width: 86%;
+      position: absolute; }
       .main .modal .modal-content .success.active {
         display: block; }
   .main .dots {

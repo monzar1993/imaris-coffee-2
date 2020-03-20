@@ -10,10 +10,10 @@ function myFunction() {
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 40) {
         document.getElementById("logo").style.width = "45px";
     } else {
-        document.getElementById("logo").style.width = "155px";
+        document.getElementById("logo").style.width = "120px";
     }
 }
 // navbar
@@ -23,6 +23,9 @@ var modal = document.getElementById("myModal");
 var modalBg = document.getElementsByClassName("modal-bg");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
+var makeOrder = document.getElementById('freeze');
+var orderForm = document.getElementsByClassName('order-form');
+var succesMsg = document.getElementsByClassName('success');
 
 btn.onclick = function() {
     modal.classList.toggle('active');
@@ -34,12 +37,12 @@ span.onclick = function() {
     document.getElementById('myBtn').classList.remove('active');
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.classList.remove('active');
-        document.getElementById('myBtn').classList.remove('active');
-    }
+
+makeOrder.onclick = function() {
+    orderForm.classList.add('hide');
+    succesMsg.classList.add('active');
 }
+
 
 //modal
 //tabs

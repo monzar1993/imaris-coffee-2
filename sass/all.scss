@@ -142,8 +142,17 @@ section {
     margin-bottom: 0;
 }
 
+.mb-m-0 {
+    @media screen and (max-width: 576px) {
+        margin-bottom: 0!important;
+    }
+}
+
 .ml--50 {
     margin-left: -50px;
+    @media screen and (max-width: 767px) {
+        margin-left: 0;
+    }
 }
 
 .mt-1 {

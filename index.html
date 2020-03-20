@@ -31,7 +31,7 @@
                                 <path
                                     d="M17.01 12.38C15.78 12.38 14.59 12.18 13.48 11.82C13.13 11.7 12.74 11.79 12.47 12.06L10.9 14.03C8.07 12.68 5.42 10.13 4.01 7.2L5.96 5.54C6.23 5.26 6.31 4.87 6.2 4.52C5.83 3.41 5.64 2.22 5.64 0.99C5.64 0.45 5.19 0 4.65 0H1.19C0.65 0 0 0.24 0 0.99C0 10.28 7.73 18 17.01 18C17.72 18 18 17.37 18 16.82V13.37C18 12.83 17.55 12.38 17.01 12.38Z"
                                     fill="#D5B584" />
-                            </svg> <span class="nav-link hide-link bold number-link">+38 (097) 362-46-96</span></a>
+                            </svg><span class="nav-link hide-link bold number-link">+38(097)362-46-96</span></a>
                         <div class="dropdown">
                             <button class="dropbtn lang-btn bold">RU <span class="gold">+</span></button>
                             <div class="dropdown-content lang-select">
@@ -47,14 +47,37 @@
                     <button class="dropbtn bold">КОНДИТЕРСКИЕ ИЗДЕЛИЯ
                         &#9776;
                     </button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                    <div class="dropdown-content cakes">
+                        <ul>
+                            <li class="head-title">Торты</li>
+                            <li>Свадебные</li>
+                            <li>Детские</li>
+                            <li>Для мужчин</li>
+                            <li>Для женщин</li>
+                            <li>К юбилею</li>
+                            <li>На каждый день</li>
+                        </ul>
+                        <ul>
+                            <li class="head-title">Капкейки</li>
+                            <li>Свадебные</li>
+                            <li>На праздники</li>
+                            <li>Детские</li>
+                            <li>На каждый день</li>
+                        </ul>
+                        <ul>
+                            <li class="head-title">Кейк-попсы</li>
+                            <li>Свадебные</li>
+                            <li>Детские</li>
+                        </ul>
+                        <ul>
+                            <li class="head-title">Доставка</li>
+                        </ul>
+                        <button class="read-more btn">ВСЕ ИЗДЕЛИЯ<img class="arrow"
+                            src="images/arrow_right.png" alt="arrow"></button>
                     </div>
                 </div>
                 <div class="mobile-search">
-                    <a class="nav-link bold" href="#number"> <img class="phone-icon" src="images/phone-icon.png" alt="phone"></a>
+                    <a class="nav-link bold" href="#" onclick="+38(097)362-46-96"> <img class="phone-icon" src="images/phone-icon.png" alt="phone"></a>
                     <a class="nav-link d-block bold" href="#search"><img class="search-icon" src="images/search-icon.png" alt="search"></a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
@@ -72,16 +95,35 @@
                     <div class="order-form">
                         <form>
                             <input class="bold white mb-2" type="text" placeholder="Ваше имя*">
-                            <input class="bold white mb-2" type="number" placeholder="Ваш телефон*">
+                            <input class="bold white mb-2 mb-m-0" type="number" placeholder="Ваш телефон*">
                             <div class="img-block">
-                                <p class="mb-1 bold white">Выберите столик</p>
+                                <p class="mb-1 bold white choose-table">Выберите столик</p>
                                 <img class="table-img" src="images/order-table.jpg" alt="order-table">
-                                <button class="read-more btn">ОТПРАВИТЬ<img class="arrow"
+                                <div class="select">
+                                    <select class="date">
+                                        <option value="" hidden disabled selected>Дата*</option>
+                                        <option>21.03</option>
+                                        <option>22.03</option>
+                                        <option>23.03</option>
+                                    </select>
+                                    <select class="time">
+                                        <option value="" hidden disabled selected>Время*</option>
+                                        <option>17:00</option>
+                                        <option>18:00</option>
+                                        <option>19:00</option>
+                                        <option>20:00</option>
+                                    </select>
+                                </div>
+                                <input class="persons-n" type="number" placeholder="Количество персон*">
+
+
+                                <button id="freeze" class="make-order read-more btn">ЗАБРОНИРОВАТЬ<img class="arrow"
                                         src="images/arrow_right.png" alt="arrow"></button>
 
                             </div>
                         </form>
                     </div>
+                    <p class="success">Спасибо! Ваша заявка на бронирование стола принята. В ближайшее время с вами свяжется администратор, для уточненя деталей.</p>
                 </div>
 
             </div>
@@ -142,6 +184,9 @@
                                 </div>
                             </div>
                             <div class="find-us mobile">
+                                <div class="dots dots-3">
+                                    <img src="images/gold-dots.png" alt="dots">
+                                </div>
                                 <div class="contact-block">
                                     <p class="contact-p">адрес:</p>
                                     <p class="content-p">ул. Мира, 27, Софиевская Борщаговка, Киевская область</p>
@@ -210,8 +255,9 @@
                     </a>
                 </div>
                 <div class="insta-connect">
-                    <div class="side">
-                        <img src="images/gold-dots.png" alt="dots">
+                    <div class="side mobi">
+                        <img class="desktop" src="images/gold-dots.png" alt="dots">
+                        <img class="mobile" src="images/line-m.svg" alt="dots">
                     </div>
                     <div class="our-insta">
                         <div class="insta-description">
@@ -292,7 +338,7 @@
                         <div class="col col-7">
                             <h3 class="mb-1 ml--50">Акция! Подарки новым гостям!</h3>
                             <p class="new-guest-text guest-1 mb-1">Мы всегда рады видеть новые лица в кафе и стремимся поделиться нашими десертами со всеми хорошими людьми. Именно поэтому мы дарим скидку 10% на кондитерские изделия всем новым клиентам, которые оформят заказ онлайн.</p>
-                            <p class="new-guest-text bold mb-1">Поспешите! До конца акции осталось всего:</p>
+                            <p class="new-guest-text hurry bold mb-1">Поспешите! До конца акции осталось всего:</p>
                             <p class="mb-0">
                                 <span id="t" class="timer bold"></span>
                                 <div class="d-flex timer-text">
@@ -341,10 +387,10 @@
                                 <form>
                                     <input class="bold white mb-2" type="text" placeholder="Ваше имя*">
                                     <input class="bold white mb-2" type="email" placeholder="Ваш email*">
-                                    <div class="texarea-block">
+                                    <div class="textarea-block">
                                         <label class="mb-1 bold white" for="textarea">Отзыв*</label>
                                         <textarea id="textarea" class="mb-2" cols="30" rows="10"></textarea>
-                                        <button class="read-more btn">ОТПРАВИТЬ<img class="arrow"
+                                        <button class="read-more btn">ПОДРОБНЕЕ<img class="arrow"
                                                 src="images/arrow_right.png" alt="arrow"></button>
 
                                     </div>
@@ -355,7 +401,7 @@
                 </div>
             </section>
             <section class="latest-news">
-                <div class="container">
+                <div class="">
                     <h3 class="text-center">Последние новости</h3>
                     <div class="tab">
                         <button class="tablinks active" onclick="openTab(event, 'poster')">АФИША</button>

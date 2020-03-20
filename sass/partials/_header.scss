@@ -34,6 +34,9 @@ header {
             }
             &.number-link {
                 padding: 18px 30px 18px 14px;
+                @media screen and (max-width: 1440px) {
+                    padding: 22px 10px;
+                }
             }
         }
         .home-link {
@@ -47,12 +50,16 @@ header {
             &:hover {
                 background: transparent;
             }
+            @media screen and (max-width:576px) {
+                float: none;
+                text-align: center;
+            }
         }
         &.responsive {
             .home-link {
                 img {
                     @media screen and (max-width: 1024px) {
-                        width: 160px;
+                        width: 120px;
                         padding-top: 5px;
                         transition: 0.3s;
                     }
@@ -81,8 +88,17 @@ header {
             width: calc(100% - 292px);
             display: flex;
             justify-content: space-between;
+            @media screen and (max-width: 576px) {
+                width: 100%;
+            }
             .menu-main {
                 padding-left: 62px;
+                @media screen and (max-width: 1366px) {
+                    padding-left: 0;
+                }
+                @media screen and (max-width: 576px) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -104,6 +120,8 @@ header {
         font-size: 30px;
         position: absolute;
         left: 0;
+        color: #fff;
+        background: $gold-color;
     }
     .dropdown {
         float: left;
@@ -127,6 +145,9 @@ header {
             &.lang-btn {
                 background: #fff;
                 color: #000;
+                @media screen and (max-width: 1366px) {
+                    padding: 22px 10px;
+                }
             }
         }
     }
@@ -173,6 +194,40 @@ header {
     .dropdown:hover .dropdown-content {
         display: block;
     }
+    .dropdown-content {
+        &.cakes {
+            height: calc(100vh - 59px);
+            background-color: $gold-color;
+            overflow-y: auto;
+            ul {
+                margin-bottom: 30px;
+                li {
+                    @include headings;
+                    font-size: 16px;
+                    line-height: 34px;
+                    margin-left: 65px;
+                    margin-top: 8px;
+                    cursor: pointer;
+                    &:hover {
+                        color: #fff;
+                    }
+                    &.head-title {
+                        font-size: 30px;
+                        line-height: 35px;
+                        margin-left: 40px;
+                    }
+                }
+            }
+            .read-more {
+                width: 237px;
+                height: 71px;
+                margin-left: 40px;
+                cursor: pointer;
+                background: #fff;
+                margin-bottom: 20px;
+            }
+        }
+    }
     @media screen and (max-width: 1024px) {
         .topnav a:not(:first-child),
         .dropdown .dropbtn {
@@ -195,6 +250,11 @@ header {
         .topnav.responsive a {
             float: none;
             display: block;
+            text-align: left;
+        }
+        .topnav.responsive a.home-link {
+            float: none;
+            display: block;
             text-align: center;
         }
         .topnav.responsive .dropdown {
@@ -212,6 +272,58 @@ header {
     .hide-link {
         @media screen and (max-width: 1024px) {
             display: none !important;
+        }
+    }
+    .read-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: $text-color;
+        font-family: $headings-font;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        border: 2px solid $text-color;
+        width: 200px;
+        height: 45px;
+        padding: 10px 20px;
+        @media screen and (max-width: 767px) {
+            width: 180px;
+            font-size: 14px;
+            padding: 5px 15px;
+        }
+        .arrow {
+            width: 45px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            background: $gold-color;
+            width: 0px;
+            height: 2px;
+            transition: 0.5s;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            right: -10px;
+            background: $gold-color;
+            width: 2px;
+            height: 0px;
+            transition: 0.5s;
+        }
+        &:hover {
+            &:after {
+                width: 50%;
+            }
+            &:before {
+                height: 100%;
+            }
         }
     }
 }

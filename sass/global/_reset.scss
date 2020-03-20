@@ -175,6 +175,9 @@ input:focus::-webkit-input-placeholder {
 // }
 h1 {
     font: 64px sans-serif;
+    @media screen and (max-width: 1366px) {
+        font: 55px sans-serif;
+    }
 }
 
 h3 {

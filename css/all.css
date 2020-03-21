@@ -790,7 +790,7 @@ header {
         height: 60px;
         padding: 5px 20px;
         cursor: pointer; }
-      .main .modal .modal-content .order-form.active {
+      .main .modal .modal-content .order-form.hide {
         display: none; }
     .main .modal .modal-content .success {
       display: none;

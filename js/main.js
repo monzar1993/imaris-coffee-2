@@ -38,11 +38,14 @@ span.onclick = function() {
 
 
 makeOrder.onclick = function() {
-        orderForm.classList.add('hide');
-        successMsg.classList.add('active');
-    }
-    //modal
-    //tabs
+    orderForm[0].classList.add('hide');
+    successMsg[0].classList.add('active');
+}
+
+
+
+//modal
+//tabs
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 

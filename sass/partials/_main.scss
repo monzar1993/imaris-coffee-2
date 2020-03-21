@@ -178,8 +178,8 @@
                         cursor: pointer;
                     }
                 }
-                &.hide {
-                    display: block;
+                &.active {
+                    display: none;
                 }
             }
             .success {

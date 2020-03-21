@@ -24,24 +24,23 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 var makeOrder = document.getElementById('freeze');
 var orderForm = document.getElementsByClassName('order-form');
-var succesMsg = document.getElementsByClassName('success');
+var successMsg = document.getElementsByClassName('success');
 
 btn.onclick = function() {
     modal.classList.toggle('active');
     document.getElementById('myBtn').classList.toggle('active');
 }
-
 span.onclick = function() {
     modal.classList.remove('active');
     document.getElementById('myBtn').classList.remove('active');
 }
 
-
-makeOrder.onclick = function() {
-    orderForm.classList.add('hide');
-    succesMsg.classList.add('active');
+function orderBid() {
+    orderForm.classList.toggle('hide');
+    console.log(orderForm);
+    successMsg.classList.toggle('active');
 }
-
+makeOrder.onclick = orderBid();
 
 //modal
 //tabs

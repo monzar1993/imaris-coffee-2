@@ -30,20 +30,19 @@ btn.onclick = function() {
     modal.classList.toggle('active');
     document.getElementById('myBtn').classList.toggle('active');
 }
+
 span.onclick = function() {
     modal.classList.remove('active');
     document.getElementById('myBtn').classList.remove('active');
 }
 
-function orderBid() {
-    orderForm.classList.toggle('hide');
-    console.log(orderForm);
-    successMsg.classList.toggle('active');
-}
-makeOrder.onclick = orderBid();
 
-//modal
-//tabs
+makeOrder.onclick = function() {
+        orderForm.classList.add('hide');
+        successMsg.classList.add('active');
+    }
+    //modal
+    //tabs
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
 

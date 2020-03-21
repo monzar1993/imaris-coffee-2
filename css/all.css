@@ -426,6 +426,11 @@ header {
           right: 0; } }
       header .topnav .mobile-search .d-block {
         display: block; }
+      header .topnav .mobile-search .nav-link .phone-number-hided {
+        opacity: 0;
+        position: absolute;
+        width: 30px;
+        height: 25px; }
       header .topnav .mobile-search .nav-link .phone-icon,
       header .topnav .mobile-search .nav-link .search-icon {
         width: 25px; }
@@ -785,8 +790,8 @@ header {
         height: 60px;
         padding: 5px 20px;
         cursor: pointer; }
-      .main .modal .modal-content .order-form.hide {
-        display: block; }
+      .main .modal .modal-content .order-form.active {
+        display: none; }
     .main .modal .modal-content .success {
       display: none;
       font-size: 16px;

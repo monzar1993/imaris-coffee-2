@@ -78,6 +78,12 @@ header {
                 display: block;
             }
             .nav-link {
+                .phone-number-hided {
+                    opacity: 0;
+                    position: absolute;
+                    width: 30px;
+                    height: 25px;
+                }
                 .phone-icon,
                 .search-icon {
                     width: 25px;

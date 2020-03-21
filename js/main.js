@@ -37,7 +37,9 @@ span.onclick = function() {
 }
 
 
-makeOrder.onclick = function() {
+makeOrder.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
     orderForm[0].classList.add('hide');
     successMsg[0].classList.add('active');
 }

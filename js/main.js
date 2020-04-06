@@ -74,7 +74,7 @@ function openTab(evt, tabName) {
 // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
 
 timeend = new Date();
-timeend = new Date(timeend.getYear() > 1900 ? (timeend.getYear() + 1) : (timeend.getYear() + 1900), 2, 23);
+timeend = new Date(timeend.getYear() > 1900 ? (timeend.getYear() + 1) : (timeend.getYear() + 1900), 3, 30);
 
 function time() {
     today = new Date();
